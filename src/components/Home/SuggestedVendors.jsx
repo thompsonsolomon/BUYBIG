@@ -18,7 +18,7 @@ export default function SuggestedVendors({ vendors }) {
   }, [])
 
   return (
-    <div className="mt-10 px-4 overflow-hidden">
+    <div className="mt-10 mb-10 px-4 overflow-hidden">
 
       {/* Header */}
       <div className="flex justify-between mb-4">

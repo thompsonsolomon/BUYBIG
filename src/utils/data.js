@@ -16,7 +16,7 @@ export const vendors = [
   {
     id: 2,
     name: "Chicken Republic",
-    banner: "/images/food2.jpg",
+    banner: "/images/food3.jpg",
     logo: "/images/profile2.jpg",
     category: "Fast food",
     rating: 4.3,
@@ -29,7 +29,28 @@ export const vendors = [
     category: "Fast food",
     rating: 4.3,
   },
- 
+ {
+    id: 3,
+    name: "Chicken Republic",
+    banner: "/images/food4.jpg",
+    logo: "/images/profile2.jpg",
+    category: "Fast food",
+    rating: 4.3,
+  },{
+    id: 3,
+    name: "Chicken Republic",
+    banner: "/images/food5.jpg",
+    logo: "/images/profile2.jpg",
+    category: "Fast food",
+    rating: 4.3,
+  },{
+    id: 3,
+    name: "Chicken Republic",
+    banner: "/images/food6.jpg",
+    logo: "/images/profile2.jpg",
+    category: "Fast food",
+    rating: 4.3,
+  },
 
 ];
 

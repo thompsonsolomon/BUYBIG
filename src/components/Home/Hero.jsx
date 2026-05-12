@@ -10,19 +10,19 @@ import hero2 from "../../assets/images/hero2.jpg"
 import hero3 from "../../assets/images/hero3.jpg"
 import { banners } from "../../utils/data"
 export default function Hero() {
-  return (
-    <>
-      {/* Mobile */}
-      <div className="block md:hidden">
-        <HeroMobile />
-      </div>
+ return (
+  <>
+   {/* Mobile */}
+   <div className="block md:hidden">
+    <HeroMobile />
+   </div>
 
-      {/* Desktop */}
-      <div className="hidden md:block">
-        <HeroDesktop />
-      </div>
-    </>
-  )
+   {/* Desktop */}
+   <div className="hidden md:block">
+    <HeroDesktop />
+   </div>
+  </>
+ )
 }
 
 export const HeroDesktop = () => {
@@ -133,7 +133,7 @@ export const HeroDesktop = () => {
 }
 
 export const HeroMobile = () => {
-  const images = [hero1, hero2, hero3]
+ const images = [hero1, hero2, hero3]
 
  return (
   <section className="relative bg-background overflow-hidden">
@@ -192,15 +192,18 @@ export const HeroMobile = () => {
       modules={[Autoplay]}
       autoplay={{
        delay: 3000,
-       reverseDirection: true // 🔥 THIS is the fix
-      }} loop={true}
+       reverseDirection: true
+      }}
+      loop={true}
+      slidesPerView={1}
+      spaceBetween={0}
       className="h-full w-full"
      >
 
       {images.map((img, i) => (
        <SwiperSlide key={i}>
         <div
-         className="w-full h-[80vh] md:h-[500px] bg-cover bg-center scale-110 md:scale-100 transition-all duration-700"
+         className="w-full h-[80vh] md:h-[400px] bg-cover bg-center scale-110 md:scale-100 transition-all duration-700"
          style={{ backgroundImage: `url(${img})` }}
         />
 
@@ -215,5 +218,7 @@ export const HeroMobile = () => {
     </div>
 
    </div>
-  </section> )
+  </section>
+
+ )
 }
