@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.svg", "favicon.ico", "robots.txt", "apple-touch-icon.png"],
       manifest: {
-        name: "Elisoft Assist",
-        short_name: "Elisoft",
+        name: "BUYBIG ",
+        short_name: "BUYBIG",
         description: "A modern PWA built with React + Vite",
         theme_color: "#000000",
         background_color: "#ffffff",
@@ -56,7 +56,6 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ["react", "react-dom", "react-router-dom"],
-          maps: ["@googlemaps/react-wrapper"],
         },
       },
     },
