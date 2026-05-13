@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import App from "./App"
 import "./styles.css"
+import { CartProvider } from "./context/CartContext";
 
 const updateSW = registerSW({
   onNeedRefresh() {
@@ -73,6 +74,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ErrorBoundary>
         <BrowserRouter>
+        <CartProvider>
           <div className="overflow-x-hidden">
             <App />
           </div>
@@ -81,6 +83,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             autoClose={3000}
               theme="colored"
             />
+
+            </CartProvider>
         </BrowserRouter>
     </ErrorBoundary>
   </React.StrictMode>,

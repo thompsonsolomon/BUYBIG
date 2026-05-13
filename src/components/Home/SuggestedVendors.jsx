@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 
+import VendorCard from "../../features/vendors/components/VendorCard"
+
 export default function SuggestedVendors({ vendors }) {
   const [index, setIndex] = useState(0)
 
@@ -12,7 +14,7 @@ export default function SuggestedVendors({ vendors }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => prev + 1)
-    }, 2500) // delay between steps
+    }, 3000) // delay between steps
 
     return () => clearInterval(interval)
   }, [])
@@ -40,29 +42,13 @@ export default function SuggestedVendors({ vendors }) {
             setIndex(0)
           }
         }}
-        className="flex gap-4"
+        className="flex gap-4 w-full"
       >
-        {looped.map((vendor, i) => (
-          <div
-            key={i}
-            className="min-w-[260px] bg-white rounded-2xl shadow-md overflow-hidden flex-shrink-0"
-          >
-            <img
-              src={vendor.banner}
-              className="w-full h-36 object-cover"
-            />
-
-            <div className="p-3 flex gap-3">
-              <img
-                src={vendor.logo}
-                className="w-12 h-12 rounded-xl"
-              />
-              <div>
-                <h3 className="font-semibold  text-sm">{vendor.name}</h3>
-                <p className="text-xs text-gray-500">{vendor.category}</p>
-                <p className="text-xs text-yellow-500">⭐ {vendor.rating}</p>
-              </div>
-            </div>
+        {looped.map((vendor, i) => (  
+          <div className=" min-w-[260px] bg-white rounded-2xl shadow-md overflow-hidden flex-shrink-0 grid grid-cols-5 gap-6">
+            {vendors.slice(0, 5).map((vendor) => (
+              <VendorCard key={vendor.id} vendor={vendor} page="home" />
+            ))}
           </div>
         ))}
       </motion.div>
